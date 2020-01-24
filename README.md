@@ -1,6 +1,10 @@
 
-
 ## Trending Gifs (Using Giphy API)
+
+## Technologies Used
+
+* React
+* JavaScript
 
 ### Project Setup
 
