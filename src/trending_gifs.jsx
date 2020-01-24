@@ -55,7 +55,6 @@ class TrendingGifs extends React.Component {
                 <p className="heading" >Top Trending Gifs!</p>
                 <div className="gif-images">
                     {gifs.map(gif => {
-                        console.log(gif)
                         return (
                             <img
                                 src={ gif.images.fixed_height_small.url }
