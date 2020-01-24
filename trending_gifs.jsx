@@ -20,21 +20,34 @@ class TrendingGifs extends React.Component {
     fetchGifs() {
         fetch(`https://api.giphy.com/v1/gifs/trending?limit=${this.state.limit}&api_key=OMxGuLvUi86EfSlroz3hUEtB5kocntyz`)
             .then(response => response.json())
-            .then(data => this.setState({ gifs: data.data }));
+            .then(gifs => this.setState({ gifs: gifs.data }))
+            .catch(error => console.log(error))
+
     }
 
     fetchNextGifs() {
-        this.setState({
-            limit: this.state.limit + 10
-        }, () => this.fetchGifs());
+
+        if (this.state.limit < 91) {
+            this.setState({
+                limit: this.state.limit + 10
+            }, () => this.fetchGifs());
+        } else {
+            console.log("already 100")
+        }
     }
 
 
     render () {
+
+        const { gifs } = this.state;
+
+        if (!gifs) {
+            return "Loading"
+        }
+
         return (
             <div>
-                {this.state.gifs.map(gif => {
-                    console.log(gif)
+                {gifs.map(gif => {
                     return (
                         <img src={ gif.images.fixed_width_small.url } key={ gif.id } />
 
