@@ -4,9 +4,13 @@
 
 ### Project Setup
 
-npm install
+<pre><code>
+    npm install
+</code></pre>
 
 ### Compiles and live-reloads for development
 
-npm run start
+<pre><code>
+    npm run start
+</code></pre>
 
