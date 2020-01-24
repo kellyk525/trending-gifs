@@ -63,7 +63,7 @@ img {
 
 button {
     height: 40px;
-    width: 130px;
+    width: 140px;
     cursor: pointer;
     outline: none;
     border-radius: 5px;
@@ -75,6 +75,7 @@ button {
     letter-spacing: 2px;
     text-transform: uppercase;
     font-family: Assistant, sans-serif;
+    font-size: 10px;
 }
 
 button:hover {
