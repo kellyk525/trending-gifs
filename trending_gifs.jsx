@@ -11,6 +11,7 @@ class TrendingGifs extends React.Component {
         }
 
         this.fetchNextGifs = this.fetchNextGifs.bind(this);
+        this.handleReverse = this.handleReverse.bind(this);
     }
 
     componentDidMount() {
@@ -26,7 +27,6 @@ class TrendingGifs extends React.Component {
     }
 
     fetchNextGifs() {
-
         if (this.state.limit < 91) {
             this.setState({
                 limit: this.state.limit + 10
@@ -36,6 +36,11 @@ class TrendingGifs extends React.Component {
         }
     }
 
+    handleReverse() {
+        this.setState({
+            limit: 10
+        }, () => this.fetchGifs());
+    }
 
     render () {
 
@@ -61,6 +66,7 @@ class TrendingGifs extends React.Component {
                 </div>
                 <br />
                 <button onClick={ this.fetchNextGifs } >Load More Gifs</button>
+                <button onClick={ this.handleReverse } >Go Back</button>
             </div>
         )
     }
