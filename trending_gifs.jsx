@@ -9,6 +9,8 @@ class TrendingGifs extends React.Component {
             gifs: [],
             limit: 10
         }
+
+        this.fetchNextGifs = this.fetchNextGifs.bind(this);
     }
 
     componentDidMount() {
@@ -34,10 +36,12 @@ class TrendingGifs extends React.Component {
                 {this.state.gifs.map(gif => {
                     console.log(gif)
                     return (
-                        <img src={ gif.images.fixed_height_small_still.url } key={ gif.id } />
+                        <img src={ gif.images.fixed_width_small.url } key={ gif.id } />
 
                     )
                 })}
+                <br />
+                <button onClick={ this.fetchNextGifs } >Load More Gifs</button>
             </div>
         )
     }
