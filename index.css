@@ -37,7 +37,6 @@ p {
 .contain-all {
     width: 90vw;
     margin: 0 auto;
-    /* background: blue; */
 }
 
 .heading {
@@ -59,6 +58,7 @@ p {
 
 img {
     margin: 7px;
+    border-radius: 3px;
 }
 
 button {
@@ -68,6 +68,7 @@ button {
     outline: none;
     border-radius: 5px;
     border: 1px solid black;
+    margin-right: 22px;
     
     color: white;
     background: black;
