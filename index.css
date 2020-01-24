@@ -1,1 +1,83 @@
 
+/*  Reset Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #eee;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Individual Styling */
+
+.contain-all {
+    width: 90vw;
+    margin: 0 auto;
+    /* background: blue; */
+}
+
+.heading {
+    color: rgba(117, 117, 247, 0.658);
+    font-family: Josefin Sans;
+    font-weight: 400;
+    font-size: 45px;
+    letter-spacing: 2px;
+
+    padding: 45px 0px;
+    padding-bottom: 20px;
+}
+
+.gif-images {
+    height: 70vh;
+    overflow: scroll;
+    margin-bottom: 11px;
+}
+
+img {
+    margin: 7px;
+}
+
+button {
+    height: 40px;
+    width: 130px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    
+    color: white;
+    background: black;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Assistant, sans-serif;
+}
+
+button:hover {
+    background: rgb(187, 187, 187);
+    border: 1px solid white;
+    color: black;
+}

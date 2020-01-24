@@ -32,7 +32,7 @@ class TrendingGifs extends React.Component {
                 limit: this.state.limit + 10
             }, () => this.fetchGifs());
         } else {
-            console.log("already 100")
+            console.log("reached 100")
         }
     }
 
@@ -46,13 +46,19 @@ class TrendingGifs extends React.Component {
         }
 
         return (
-            <div>
-                {gifs.map(gif => {
-                    return (
-                        <img src={ gif.images.fixed_width_small.url } key={ gif.id } />
-
-                    )
-                })}
+            <div className="contain-all">
+                <p className="heading" >Top Trending Gifs!</p>
+                <div className="gif-images">
+                    {gifs.map(gif => {
+                        console.log(gif)
+                        return (
+                            <img
+                                src={ gif.images.fixed_height_small.url }
+                                key={ gif.id }
+                            />
+                        )
+                    })}
+                </div>
                 <br />
                 <button onClick={ this.fetchNextGifs } >Load More Gifs</button>
             </div>
